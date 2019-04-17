@@ -1,5 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule ,JsonpModule} from "@angular/http";
+
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { SearchComponent } from "./components/search/search.component";
 import { AboutComponent } from "./components/about/about.component";
@@ -16,7 +18,7 @@ const routes: Routes = [
 
 ]
 @NgModule({
-  imports:      [ BrowserModule,RouterModule.forRoot(routes) ],
+  imports:      [ BrowserModule,RouterModule.forRoot(routes),HttpModule ],
   declarations: [ AppComponent,AboutComponent,NavbarComponent, SearchComponent ],
   bootstrap:    [ AppComponent ]
 })
