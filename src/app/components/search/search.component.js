@@ -9,6 +9,9 @@ var core_1 = require("@angular/core");
 var SearchComponent = (function () {
     function SearchComponent() {
     }
+    SearchComponent.prototype.searchMusic = function () {
+        console.log(this.searchStr);
+    };
     return SearchComponent;
 }());
 SearchComponent = __decorate([

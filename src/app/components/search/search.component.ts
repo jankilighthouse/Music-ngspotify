@@ -7,5 +7,9 @@ import {Component} from '@angular/core';
 })
 
 export class SearchComponent {
+    searchStr:string;
 
+  searchMusic() {
+    console.log(this.searchStr);
    }
+  }
