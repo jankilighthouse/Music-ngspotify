@@ -33,5 +33,6 @@ export class ArtistComponent implements OnInit{
                 console.log(this.artist)
 
               })
- }
+        })
+    }
 }

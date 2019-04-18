@@ -29,6 +29,19 @@ var SpotifyService = (function () {
         return this._http.get(this.searchUrl, options)
             .map(function (res) { return res.json(); });
     };
+    SpotifyService.prototype.getArtist = function (id) {
+        var accessToken = 'BQD5UP16bvcpazVctmN5Hb7yTzk18ycDD_fzRzVTIQlyQxYdiWgmNCl7Wb2YvpXVwMIk0G3xqz-ERN7bsLNN_9LaATgmR0sxbHdtcSI7G4WnboTtzjTURu8uWqxPQosR7fi5G9onTLp3HGlTi3cthCRXAfIVNXEeyR5Xrsy8-5y4crVaaWvl';
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Authorization', 'Bearer ' + accessToken);
+        var options = new http_1.RequestOptions({ headers: headers });
+        // console.log(options);
+        console.log(this.artistUrl = 'https://api.spotify.com/v1/artists/' + id);
+        // console.log("url",searchUrl);
+        // this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=50&type='+type+ '&market=US';
+        return this._http.get(this.artistUrl, options)
+            .map(function (res) { return res.json(); });
+    };
     return SpotifyService;
 }());
 SpotifyService = __decorate([
