@@ -15,8 +15,9 @@ var SearchComponent = (function () {
         this._spotifyService = _spotifyService;
     }
     SearchComponent.prototype.searchMusic = function () {
+        var _this = this;
         this._spotifyService.searchMusic(this.searchStr, 'artist').subscribe(function (res) {
-            console.log(res.artists.items);
+            console.log("Art", _this.searchRes = res.artists.items);
         });
     };
     return SearchComponent;

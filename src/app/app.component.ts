@@ -6,7 +6,7 @@ import {SpotifyService} from './components/services/spotify.service';
   moduleId: module.id,
   selector: 'my-app',
   templateUrl: 'app.component.html',
-      providers:  [SpotifyService]
+  providers:  [SpotifyService]
 
 
 
